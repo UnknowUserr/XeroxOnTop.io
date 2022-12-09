@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    /* .5rem = 8px | 1rem = 16px ... */
+    --bgcolor: rgb(16, 0, 38);
+    --navfont: 'Poppins', sans-serif;
+    --h1_font_size: 1.5rem;
+
+    /* font weight */
+    --font_weight-medium: 500;
+    --font-semi_bold: 600;
+}
+
+body {
+    color: #fff;
+    background: var(--bgcolor);
+    background-image:  url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.5" fill="%23FFFFFF" cx="28.75" cy="22.338" r="0.713"/><circle opacity="0.2" fill="%23FFFFFF" cx="26.75" cy="79.443" r="0.307"/><circle opacity="0.5" fill="%23FFFFFF" cx="50" cy="41.884" r="0.308"/><circle fill="%23FFFFFF" cx="12.883" cy="42.25" r="0.367"/><circle opacity="0.4" fill="%23FFFFFF" cx="80" cy="72.818" r="0.307"/><circle opacity="0.5" fill="%23FFFFFF" cx="55.625" cy="12.375" r="0.308"/><circle opacity="0.2" fill="%23FFFFFF" cx="73.307" cy="89.375" r="0.308"/><circle opacity="0.5" fill="%23FFFFFF" cx="73" cy="53.884" r="0.308"/><circle opacity="0.5" fill="%23FFFFFF" cx="38.875" cy="89.432" r="0.385"/></svg>');
+    background-size: 20rem 20rem;
+    background-position: center -10;
+    animation: bg 20s linear infinite;
+}
+
+@keyframes bg{
+    to{
+        background-position: center 20rem;
+    }
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.navlinks {
+    font-family: var(--navfont);
+    font-size: 1em;
+}
+
+header {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-right: 2rem;
+    transition: all 0.6s ease 0s;
+}
+
+.navbar a{
+    color: #fff;
+    padding-right: 3em;
+}
+
+.logo {
+    color: #fff;
+    font-size: 3rem;
+    padding: 0 57px;
+}
+
+
+.navbar a{
+    padding: 7px 25px;
+}
+
+.navlinks{
+    position:relative;
+}
+
+a.navlinks {
+    transition: all 0.3s ease 0s;
+}
+
+/* .navlinks:hover {
+    background-color: white;
+    color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+} */
+
+#home {
+    position: relative;
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: white;
+    color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#contact:hover {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: white;
+    color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#skill:hover {
+    padding: 9px 25px;
+    background-color: white;
+    color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.wrapper{
+    width: 40%;
+    min-width: 590px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.container{
+    width: 100%;
+    padding: 30px 30px 50px;
+    background-color: #fff;
+    border-radius: 10px;
+} 
+
+.container *{
+    font-family: "Poppins",sans-serif;
+    color: rgb(30, 30, 30);
+    font-weight: 500;
+}
+
+h2{
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bar{
+    position: relative;
+
+    border: 2px solid rgb(30, 30, 30);
+
+    border-radius: 20px;
+
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: rgb(30, 30, 30);
+}
+
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 80%;
+    }
+}
+
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 60%;
+    }
+}
+
+#javascript-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 5%;
+    }
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+.container {
+    animation: floating 3s ease-in-out 0s infinite;
+}
+
+#Python-bar{
+    animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill{
+    100%{
+        width: 68%;
+    }
+} 
