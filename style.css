@@ -12,7 +12,7 @@
 
 :root{
     /* .5rem = 8px | 1rem = 16px ... */
-    --bgcolor: rgb(16, 0, 38);
+    --bgcolor: #000;
     --navfont: 'Poppins', sans-serif;
     --h1_font_size: 1.5rem;
 
